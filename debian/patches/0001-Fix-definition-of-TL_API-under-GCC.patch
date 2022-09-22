@@ -1,0 +1,25 @@
+From: Sebastian Ramacher <sramacher@debian.org>
+Date: Tue, 15 Oct 2019 20:13:06 +0200
+Subject: Fix definition of TL_API under GCC
+
+---
+ libtwolame/twolame.h | 6 +++---
+ 1 file changed, 3 insertions(+), 3 deletions(-)
+
+diff --git a/libtwolame/twolame.h b/libtwolame/twolame.h
+index 6bf9734..4348fde 100644
+--- a/libtwolame/twolame.h
++++ b/libtwolame/twolame.h
+@@ -56,9 +56,9 @@ extern "C" {
+ #  endif
+ # endif
+ #else
+-# ifdef GNUC
+-#  if GNUC >= 4
+-#   define TL_API attribute ((visibility("default")))
++# ifdef __GNUC__
++#  if __GNUC__ >= 4
++#   define TL_API __attribute__ ((visibility("default")))
+ #  else
+ #   define TL_API
+ #  endif

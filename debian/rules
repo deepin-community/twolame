@@ -1,0 +1,12 @@
+#!/usr/bin/make -f
+
+export DEB_BUILD_MAINT_OPTIONS=hardening=+all
+export DEB_CFLAGS_MAINT_APPEND=-fvisibility=hidden
+
+%:
+	dh $@
+
+override_dh_auto_test:
+
+override_dh_installchangelogs:
+	dh_installchangelogs NEWS

@@ -1,0 +1,3 @@
+# lintian bug #840998
+twolame source: outdated-autotools-helper-file build-scripts/config.guess 2008-11-15
+twolame source: outdated-autotools-helper-file build-scripts/config.sub 2008-09-08
