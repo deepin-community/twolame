@@ -1,3 +1,9 @@
+twolame (0.4.0-2deepin1) unstable; urgency=medium
+
+  * Rebuild with LTO enabled (dpkg vendor feature optimize/lto).
+
+ -- tunaichao <tunaichao@uniontech.com>  Mon, 21 Sep 2026 16:18:24 +0800
+
 twolame (0.4.0-2) unstable; urgency=medium
 
   * debian/: Provide a less verbose changelog and clean up docs
